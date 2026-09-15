@@ -94,7 +94,7 @@ segments:
       - [0x2B410, asm]
       - [0x2C860, asm]
       - [0x2D890, asm]
-      - [0x30290, asm]
+      - [0x30290, c]
       - [0x311B0, asm]
       - [0x326C0, asm]
       - [0x32F50, asm]
