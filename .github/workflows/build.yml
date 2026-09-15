@@ -42,6 +42,7 @@ jobs:
           source .venv/bin/activate
           python3 -m pip install --upgrade pip
           python3 -m pip install -U "splat64[mips]"
+          python3 -m pip install -U mapfile_parser
 
       - name: Split ROM with splat
         run: |
@@ -52,3 +53,12 @@ jobs:
         run: |
           source .venv/bin/activate
           make -j$(nproc)
+      - name: Generate Progress Report
+        run: |
+          source .venv/bin/activate
+          python3 -m mapfile_parser objdiff_report --version us
+      - name: Upload Progress Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: us_report
+          path: build/progress.json

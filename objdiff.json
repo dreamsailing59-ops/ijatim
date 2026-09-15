@@ -1,0 +1,33 @@
+{
+  "custom_make": "make",
+  "build_base": true,
+  "build_target": false,
+  "watch_patterns": [
+    "*.c",
+    "*.h",
+    "*.s",
+    "Makefile",
+    "splat.yaml"
+  ],
+  "ignore_patterns": [
+    "build/**/*"
+  ],
+  "units": [
+    {
+      "name": "src/1A7B0.c",
+      "target_path": "expected/build/src/1A7B0.o",
+      "base_path": "build/src/1A7B0.o",
+      "metadata": {
+        "source_path": "src/1A7B0.c"
+      }
+    },
+    {
+      "name": "src/30290.c",
+      "target_path": "expected/build/src/30290.o",
+      "base_path": "build/src/30290.o",
+      "metadata": {
+        "source_path": "src/30290.c"
+      }
+    }
+  ]
+}

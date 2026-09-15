@@ -1,0 +1,27 @@
+name: Indiana Jones and the Infernal Machine
+repo: https://github.com/dreamsailing59-ops/ijatim
+platform: n64
+versions:
+- name: us
+  fullname: US
+  sha1: 93300d63412d6c7432109b5ad2e4a8b9348e9538
+  paths:
+    target: "ijatim_base.z64"
+    build_dir: "build"
+    map: "build/ijatim.map"
+    compiled_target: "build/ijatim.z64"
+    elf: "build/ijatim.elf"
+    expected_dir: "expected"
+    asm: "asm"
+    nonmatchings: "asm/nonmatchings"
+  
+tools:
+  mapfile_parser:
+    progress_report:
+      output: build/progress.json
+      check_asm_paths: True
+      report_data: True
+      prefixes_to_trim:
+        - build/src/
+        - build/asm/
+        - build/
