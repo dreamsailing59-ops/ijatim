@@ -1,5 +1,7 @@
 #include "common.h"
 
+/* Will need to clean up the C code for these functions because most of them were generated with m2c */
+
 INCLUDE_ASM("asm/nonmatchings/1A7B0", func_80019BB0);
 
 // INCLUDE_ASM("asm/nonmatchings/1A7B0", func_80019C60);
@@ -41,8 +43,49 @@ u8* func_80019C80(u8* arg0, u8* arg1, s32 arg2) {
     return arg0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/1A7B0", func_80019CBC);
+// INCLUDE_ASM("asm/nonmatchings/1A7B0", func_80019CBC);
+u8* func_80019CBC(u8* arg0, u8* arg1) {
+    u8 temp_v0;
+    u8* var_a1;
+    u8* var_v1;
 
-INCLUDE_ASM("asm/nonmatchings/1A7B0", func_80019CF4);
+    var_a1 = arg1;
+    var_v1 = arg0;
+    if (*arg0 != 0) {
+        do {
+            var_v1 += 1;
+        } while (*var_v1 != 0);
+    }
+    do {
+        temp_v0 = *var_a1;
+        var_a1 += 1;
+        *var_v1 = temp_v0;
+        var_v1 += 1;
+    } while (temp_v0 != 0);
+    return arg0;
+}
+
+// INCLUDE_ASM("asm/nonmatchings/1A7B0", func_80019CF4);
+u8* func_80019CF4(u8* arg0, u8* arg1, s32 arg2) {
+    u8* var_a1;
+    u8* var_v1;
+
+    var_a1 = arg1;
+    var_v1 = arg0;
+    if (*arg0 != 0) {
+        do {
+            var_v1 += 1;
+        } while (*var_v1 != 0);
+    }
+loop_2:
+    *var_v1 = *var_a1;
+    var_v1 += 1;
+    if (arg2 > 0) {
+        if (*var_a1++ != 0) {
+            goto loop_2;
+        }
+    }
+    return arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/1A7B0", func_80019D34);
