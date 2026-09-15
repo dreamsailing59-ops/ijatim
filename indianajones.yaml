@@ -1,0 +1,111 @@
+name: Indiana Jones (North America)
+sha1: 93300d63412d6c7432109b5ad2e4a8b9348e9538
+options:
+  basename: indianajones
+  target_path: ijatim_base.z64
+  elf_path: build/indianajones.elf
+  base_path: .
+  platform: n64
+  compiler: KMC
+
+  # asm_path: asm
+  # src_path: src
+  # build_path: build
+  # create_asm_dependencies: True
+
+  ld_script_path: indianajones.ld
+  ld_dependencies: True
+
+  find_file_boundaries: True
+  header_encoding: ASCII
+
+  o_as_suffix: True
+  use_legacy_include_asm: False
+  mips_abi_float_regs: o32
+
+  # section_order: [".text", ".data", ".rodata", ".bss"]
+  # auto_link_sections: [".data", ".rodata", ".bss"]
+
+  symbol_addrs_path:
+    - symbol_addrs.txt
+  reloc_addrs_path:
+    - reloc_addrs.txt
+
+  undefined_funcs_auto_path: undefined_funcs_auto.txt
+  undefined_syms_auto_path: undefined_syms_auto.txt
+
+  extensions_path: tools/splat_ext
+
+  # string_encoding: ASCII
+  # data_string_encoding: ASCII
+  rodata_string_guesser_level: 2
+  data_string_guesser_level: 2
+  # libultra_symbols: True
+  # hardware_regs: True
+  # gfx_ucode: # one of [f3d, f3db, f3dex, f3dexb, f3dex2]
+segments:
+  - name: header
+    type: header
+    start: 0x0
+
+  - name: ipl3
+    type: bin
+    start: 0x40
+
+  - name: entry # This game uses a non-traditional entrypoint, meaning splat's analysis may be wrong
+    type: code
+    start: 0x1000
+    vram: 0x80000400
+    align: 4
+    subalign: 4
+    subsegments:
+      - [0x1000, hasm]
+
+  - name: main
+    type: code
+    start: 0x104C
+    vram: 0x8000044C
+    align: 4
+    subalign: 4
+    subsegments:
+      - [0x104C, asm]
+      - [0x1480, asm]
+      - [0x1B90, asm]
+      - [0x2300, asm]
+      - [0x23D0, asm]
+      - [0x3240, asm]
+      - [0x32E0, asm]
+      - [0x5D40, asm]
+      - [0x6120, asm]
+      - [0x67A0, asm]
+      - [0x6C50, asm]
+      - [0x1A2F0, asm]
+      - [0x1A7B0, c]
+      - [0x1A9A0, asm]
+      - [0x20760, asm]
+      - [0x22680, asm]
+      - [0x23000, asm]
+      - [0x25D50, asm]
+      - [0x26720, asm]
+      - [0x26CD0, asm]
+      - [0x29120, asm]
+      - [0x29DC0, asm]
+      - [0x29FC0, asm]
+      - [0x2B410, asm]
+      - [0x2C860, asm]
+      - [0x2D890, asm]
+      - [0x30290, asm]
+      - [0x311B0, asm]
+      - [0x326C0, asm]
+      - [0x32F50, asm]
+      - [0x33120, asm]
+      - [0x35920, asm]
+      - [0x36870, asm]
+      - [0x36CC0, asm]
+      - [0x37DB0, asm]
+
+  - type: bin
+    start: 0x37F10
+    follows_vram: main
+
+  - [0x2000000]

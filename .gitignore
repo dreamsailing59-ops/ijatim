@@ -1,0 +1,11 @@
+*.z64
+build/
+asm/
+assets
+tools/
+.venv/
+*.d
+*.ld
+*_auto.txt
+*.inc
+include/include_asm.h
