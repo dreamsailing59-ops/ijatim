@@ -22,6 +22,22 @@
       }
     },
     {
+      "name": "src/6C50.c",
+      "target_path": "expected/build/src/6C50.o",
+      "base_path": "build/src/6C50.o",
+      "metadata": {
+        "source_path": "src/6C50.c"
+      }
+    },
+    {
+      "name": "src/29DC0.c",
+      "target_path": "expected/build/src/29DC0.o",
+      "base_path": "build/src/29DC0.o",
+      "metadata": {
+        "source_path": "src/29DC0.c"
+      }
+    },
+    {
       "name": "src/30290.c",
       "target_path": "expected/build/src/30290.o",
       "base_path": "build/src/30290.o",
