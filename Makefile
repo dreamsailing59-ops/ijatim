@@ -49,7 +49,7 @@ $(BUILD_DIR)/src/%.o: src/%.c | $(CC)
 	@sed -i -e '/\.reg/d' $(BUILD_DIR)/src/$*.s
 	$(AS) $(ASFLAGS) include/macro.inc $(BUILD_DIR)/src/$*.s -o $@
 
-$(BUILD_DIR)/undefined_syms.ld: symbol_addrs.txt | $(BUILD_DIR)
+$(BUILD_DIR)/undefined_syms.ld: symbol_addrs.txt
 	@mkdir -p $(BUILD_DIR)
 	@sed -E 's|//.*||; /^[[:space:]]*$$/d' $< > $@
 
