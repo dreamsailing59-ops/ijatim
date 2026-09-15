@@ -60,8 +60,7 @@ $(BUILD_DIR)/$(TARGET).z64: $(BUILD_DIR)/$(TARGET).elf
 	$(OBJCOPY) $< $@ -O binary
 	@echo "--------------------------------------------------------"
 	@echo "Build completed! Checking ROM match integrity..."
-	@sha1sum $@
-	@sha1sum $(BASEROM)
+	@sha1sum -c checksum.sha1
 	@echo "--------------------------------------------------------"
 
 clean:
