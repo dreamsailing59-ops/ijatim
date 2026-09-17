@@ -77,7 +77,7 @@ segments:
       - [0x32E0, asm]
       - [0x5D40, asm]
       - [0x6120, asm]
-      - [0x67A0, asm]
+      - [0x67A0, c]
       - [0x6C50, c]
       - [0x1A2F0, asm]
       - [0x1A7B0, c]
