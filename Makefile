@@ -21,6 +21,8 @@ CC_DIR      := $(CC_272_DIR)
 # Target-specific compiler override for 6C50.c
 $(BUILD_DIR)/src/6C50.o: CC := $(CC_281)
 $(BUILD_DIR)/src/6C50.o: CC_DIR := $(CC_281_DIR)
+$(BUILD_DIR)/src/67A0.o: CC := $(CC_281)
+$(BUILD_DIR)/src/67A0.o: CC_DIR := $(CC_281_DIR)
 
 ASFLAGS := -march=vr4300 -mabi=32 -no-pad-sections -I . -I include
 CFLAGS := -O2 -mips2 -mgp32 -mfp32 -G 0 -fno-pic -mno-abicalls -I include

@@ -22,6 +22,14 @@
       }
     },
     {
+      "name": "src/67A0.c",
+      "target_path": "expected/build/src/67A0.o",
+      "base_path": "build/src/67A0.o",
+      "metadata": {
+        "source_path": "src/67A0.c"
+      }
+    },
+    {
       "name": "src/6C50.c",
       "target_path": "expected/build/src/6C50.o",
       "base_path": "build/src/6C50.o",
