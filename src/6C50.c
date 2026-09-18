@@ -193,7 +193,11 @@ INCLUDE_ASM("asm/nonmatchings/6C50", func_80017CE4);
 
 INCLUDE_ASM("asm/nonmatchings/6C50", func_80017D64);
 
-INCLUDE_ASM("asm/nonmatchings/6C50", func_80017DA4);
+// INCLUDE_ASM("asm/nonmatchings/6C50", func_80017DA4);
+void func_80017DA4(s32 arg0, s32 arg1, s32 arg2) {
+    func_80006D90();
+    func_80006B88(arg0, arg1, arg2);
+}
 
 INCLUDE_ASM("asm/nonmatchings/6C50", func_80017DF0);
 

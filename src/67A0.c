@@ -1,5 +1,10 @@
 #include "common.h"
 
+typedef struct {
+    u8 pad0[0x10];
+    u32 *unk10;
+} UnkArg0;
+
 INCLUDE_ASM("asm/nonmatchings/67A0", func_80005BA0);
 
 INCLUDE_ASM("asm/nonmatchings/67A0", func_80005CFC);
@@ -15,7 +20,14 @@ void func_80005D30(u8 *arg0) {
     func_80041B80(arg0 + 0x48);
 }
 
-INCLUDE_ASM("asm/nonmatchings/67A0", func_80005D54);
+// INCLUDE_ASM("asm/nonmatchings/67A0", func_80005D54);
+s32 func_80005D54(UnkArg0 *arg0) {
+    if (arg0->unk10[0] != 0xDEADBEAF || arg0->unk10[1] != 0xDEADBEAF) {
+        return 0;
+    } else {
+        return 1;
+    }
+}
 
 // INCLUDE_ASM("asm/nonmatchings/67A0", func_80005D88);
 s32 func_80005D88(u8 *arg0) {
