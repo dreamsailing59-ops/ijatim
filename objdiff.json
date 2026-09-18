@@ -14,14 +14,6 @@
   ],
   "units": [
     {
-      "name": "src/1A7B0.c",
-      "target_path": "expected/build/src/1A7B0.o",
-      "base_path": "build/src/1A7B0.o",
-      "metadata": {
-        "source_path": "src/1A7B0.c"
-      }
-    },
-    {
       "name": "src/67A0.c",
       "target_path": "expected/build/src/67A0.o",
       "base_path": "build/src/67A0.o",
@@ -35,6 +27,22 @@
       "base_path": "build/src/6C50.o",
       "metadata": {
         "source_path": "src/6C50.c"
+      }
+    },
+    {
+      "name": "src/1A7B0.c",
+      "target_path": "expected/build/src/1A7B0.o",
+      "base_path": "build/src/1A7B0.o",
+      "metadata": {
+        "source_path": "src/1A7B0.c"
+      }
+    },
+    {
+      "name": "src/2B410.c",
+      "target_path": "expected/build/src/2B410.o",
+      "base_path": "build/src/2B410.o",
+      "metadata": {
+        "source_path": "src/2B410.c"
       }
     },
     {

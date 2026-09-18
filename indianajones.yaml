@@ -69,7 +69,7 @@ segments:
     subalign: 4
     subsegments:
       - [0x104C, asm]
-      - [0x1480, asm]
+      - [0x1480, hasm]
       - [0x1B90, asm]
       - [0x2300, asm]
       - [0x23D0, asm]
@@ -91,7 +91,7 @@ segments:
       - [0x29120, asm]
       - [0x29DC0, c]
       - [0x29FC0, asm]
-      - [0x2B410, asm]
+      - [0x2B410, c]
       - [0x2C860, asm]
       - [0x2D890, asm]
       - [0x30290, c]
